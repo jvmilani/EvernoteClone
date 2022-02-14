@@ -19,6 +19,7 @@ export default function LoginForm() {
     const [error, setError] = useState(false);
     let redirect = useNavigate();
 
+    UserService.logout();
 
     const handleSubmit = async (evt) => {
         evt.preventDefault();

@@ -1,5 +1,7 @@
 export default function UserEdit() {
-  return <>
+  return (
+  <>
     <h1>Edit user</h1>
-  </>;
+  </>
+  );
 }
