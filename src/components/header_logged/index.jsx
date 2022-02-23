@@ -41,7 +41,8 @@ export default function HeaderLogged(props) {
                 <Navbar.Segment as="div" className="navbar-item navbar-end" align="right">
                     <Navbar.Segment as="div" className="navbar-item navbar-start" align="start">
                         <Navbar.Item as="div">
-                            <Button
+                        <Column size="12" offset="1">
+                        <Button
                                 className="open-button"
                                 color="white"
                                 outlined
@@ -52,13 +53,14 @@ export default function HeaderLogged(props) {
                                 } }>
                                 <FontAwesomeIcon icon={faList} />
                             </Button>
+                    </Column>
                         </Navbar.Item>
                     </Navbar.Segment>
                     <Navbar.Item as="div">
                         <Dropdown>
                             <Dropdown.Trigger>
                                 <Button className="button" color="white" outlined>
-                                    <span>Leonardo ▼</span>
+                                    <span>{`${localStorage.getItem('user')} ▼`}</span>
                                 </Button>
                             </Dropdown.Trigger>
                             <Dropdown.Menu>
