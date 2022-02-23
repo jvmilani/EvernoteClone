@@ -7,9 +7,28 @@
 }
 
 .bm-menu {
- background: white;
- padding-top: 10px;
+  background: white;
+  padding-top: 10px;
 }
-.list-item.is-active{
- background-color: #e4e4e4;
+
+.list-i{
+  background: #e5e5e5;
+  padding: 10px;
+}
+
+.is-active{
+  background: $custom-purple;
+  // border: 2px solid red
+}
+.notes-list {
+  // background: red;
+}
+
+.notes-editor {
+  padding: 0;
+  height: calc(100% - 43px);
+
+  .quill {
+    height: 100%;
+  }
 }
