@@ -5,12 +5,14 @@ import UserService from '../../../services/users';
 function UsersEditForm() {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+    const [id, setId] = useState("");
     const [status, setStatus] = useState(null);
 
     const initializeUser = async () => {
-        const user = await JSON.parse(localStorage.getItem('user'));
-        setName(user['name']);
-        setEmail(user['email']);
+        // console.log(user);
+        setName(localStorage.getItem('user'));
+        setEmail(localStorage.getItem('email'));
+        setId(localStorage.getItem('id'));
     }
 
     useEffect(() => {
@@ -19,9 +21,8 @@ function UsersEditForm() {
 
     const handleSubmit = async (evt) => {
         evt.preventDefault();
-
         try {
-            await UserService.update({ email: email, name: name });
+            await UserService.update({ email: email, name: name, id: id });
             setStatus("success")
         } catch (err) {
             setStatus("error")
@@ -37,7 +38,7 @@ function UsersEditForm() {
                         <Input
                             type="name"
                             value={name || ""}
-                            onChange={e => setName(e.target.value)}
+                            onChange={e => {setName(e.target.value); console.log(name)}}
                             required
                             name="name"
                         />

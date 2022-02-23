@@ -2,6 +2,8 @@ import { Column, Section, Title, Container, Card, Button } from "rbx";
 import "../../../styles/users.scss";
 import HeaderLogged from "../../../components/header_logged";
 import UsersEditForm from "../../../components/auth/editForm";
+import UsersEditFormPassword from "../../../components/auth/editPass";
+import UsersDelete from "../../../components/auth/deleteUser";
 
 
 export default function UserEdit(){
@@ -29,14 +31,14 @@ export default function UserEdit(){
                 </Title>
                 <Card>
                   <Card.Content>
-                    Users Edit Password Form...
+                    <UsersEditFormPassword/>
                   </Card.Content>
                 </Card>
               </Column>
             </Column.Group>
             <Column.Group centered>
               <Column size={4} className="has-text-right">
-                Users Delete Button...
+                <UsersDelete/>
               </Column>
             </Column.Group>
           </Container>

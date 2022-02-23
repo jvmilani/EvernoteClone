@@ -2,8 +2,9 @@ import { Button, Column, Tag, Title, List } from "rbx";
 import Moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
-
+import '../../styles/notes.scss'
 function ListNotes(props) {
+  let activos;
   return (
     <>
       <Column.Group breakpoint="mobile">
@@ -20,7 +21,7 @@ function ListNotes(props) {
       </Column.Group>
       <List className="notes-list">
         {props.notes.map((item, key) =>
-          <List.Item key={key} onClick={() => {
+          <div key={key} className={item._id === props.current_note._id ? 'list-i is-active' : 'list-i'} onClick={() => {
             props.selectNote(item._id)
           }} active={item._id === props.current_note._id}>
             <Title size={6}>
@@ -29,7 +30,6 @@ function ListNotes(props) {
             <Title size={6} subtitle spaced={false}>
               {item.body.replace(/(<([^>]+)>)/ig, "").substring(0, 30)}
             </Title>
-
             <Column.Group breakpoint="mobile">
               <Column size={10}>
                 <Tag color="dark">
@@ -44,7 +44,7 @@ function ListNotes(props) {
                 />
               </Column>
             </Column.Group>
-          </List.Item>
+          </div>
         )}
       </List>
     </>

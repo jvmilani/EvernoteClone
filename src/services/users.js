@@ -18,7 +18,8 @@ const UserService = {
         const response = await Api.put("/users", params, {
             headers: { 'x-access-token': localStorage.getItem('token') }
         })
-        localStorage.setItem('user', JSON.stringify(response.data));
+        localStorage.setItem('user', response.data.username);
+        localStorage.setItem('email',response.data.email);
     },
     updatePassword: async (params) => {
         await Api.put("/users/password", params, {

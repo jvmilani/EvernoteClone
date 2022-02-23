@@ -24,20 +24,6 @@ export default function HeaderLogged(props) {
                         <Link to="/notes">
                             <img src={LogoImage} alt='logo' />
                         </Link>
-                        
-                    </Column>
-                    <Column size="11" offset="1">
-                        <Button
-                                className="open-button"
-                                color="white"
-                                outlined
-
-                                onClick={() => {
-                                    actual ? setActual(false) : setActual(true)
-                                    props.setIsOpen(actual)
-                                } }>
-                                <FontAwesomeIcon icon={faList} />
-                            </Button>
                     </Column>
                 </Column.Group>
                 <Navbar.Burger
@@ -55,7 +41,19 @@ export default function HeaderLogged(props) {
                 <Navbar.Segment as="div" className="navbar-item navbar-end" align="right">
                     <Navbar.Segment as="div" className="navbar-item navbar-start" align="start">
                         <Navbar.Item as="div">
-                            
+                        <Column size="12" offset="1">
+                        <Button
+                                className="open-button"
+                                color="white"
+                                outlined
+
+                                onClick={() => {
+                                    actual ? setActual(false) : setActual(true)
+                                    props.setIsOpen(actual)
+                                } }>
+                                <FontAwesomeIcon icon={faList} />
+                            </Button>
+                    </Column>
                         </Navbar.Item>
                     </Navbar.Segment>
                     <Navbar.Item as="div">
