@@ -1,0 +1,29 @@
+.notes {
+  height: calc(100% - 70px);
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.bm-menu {
+  background: white;
+  padding-top: 10px;
+}
+
+.list-i {
+  background: #e5e5e5;
+  padding: 10px;
+}
+
+.is-active {
+  background: #694ED8;
+}
+
+.notes-editor {
+  padding: 0;
+  height: calc(100% - 43px);
+}
+
+.notes-editor .quill {
+  height: 100%;
+}
+/*# sourceMappingURL=notes.css.map */

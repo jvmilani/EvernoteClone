@@ -1,0 +1,14 @@
+nav.navbar {
+  height: 70px;
+  border-bottom: 1px solid black;
+}
+
+nav.navbar .navbar-brand img {
+  height: 40px;
+  margin-top: 15px;
+}
+
+.navbar-logged .navbar-menu {
+  background-color: #694ED8;
+}
+/*# sourceMappingURL=header.css.map */

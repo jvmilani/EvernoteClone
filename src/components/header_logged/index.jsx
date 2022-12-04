@@ -3,7 +3,7 @@ import { Navbar, Container, Column, Button, Dropdown } from 'rbx';
 import LogoImage from '../../assets/images/logo-white.png';
 import "../../styles/header.scss";
 import UserService from '../../services/users';
-import { Redirect, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { faList } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

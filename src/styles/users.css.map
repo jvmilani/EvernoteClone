@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,WAAW,EAAE,eAAe;CAU7B;;AAXD,AAGE,MAHI,CAGJ,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;CACd;;AALH,AAOI,MAPE,CAMJ,WAAW,CACT,MAAM,CAAC;EACL,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "users.scss",
+        "_custom_colors.scss"
+    ],
+    "names": [],
+    "file": "users.css"
+}

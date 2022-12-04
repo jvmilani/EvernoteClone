@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,gBAAgB,ECHF,OAAO;EDIrB,MAAM,EAAE,kBAAkB;CAC3B",
+    "sources": [
+        "auth.scss",
+        "_custom_colors.scss"
+    ],
+    "names": [],
+    "file": "auth.css"
+}
