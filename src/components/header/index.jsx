@@ -1,8 +1,6 @@
 import { Navbar, Container, Column } from 'rbx'
 import { Link } from 'react-router-dom'
 import LogoImage from '../../assets/images/logo.png'
-import Login from '../../screens/auth/login'
-import Register from '../../screens/auth/register'
 import '../../styles/header.scss'
 
 export default function Header() {

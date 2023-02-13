@@ -5,7 +5,6 @@ import {
     Label,
     Input,
     Column,
-    Section,
     Help,
 } from "rbx";
 import { useState } from "react";
@@ -13,7 +12,6 @@ import { Link, useNavigate } from "react-router-dom";
 import UserService from "../../../services/users";
 export default function LoginForm() {
 
-    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");;
     const [error, setError] = useState(false);
@@ -24,7 +22,7 @@ export default function LoginForm() {
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         try {
-            const user = await UserService.login({
+            await UserService.login({
                 email: email,
                 password: password,
             });
@@ -35,8 +33,6 @@ export default function LoginForm() {
         }
     }
 
-    // if (redirectToLogin)
-    //   return <Navigate to={{ pathname: "/login" }} />;
     return (
         <>
             <Column.Group centered>

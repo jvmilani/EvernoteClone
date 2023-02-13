@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Button, Field, Control, Input, Column, Title, Help, Label } from "rbx";
+import { Button, Field, Control, Input, Column, Help, Label } from "rbx";
 import UserService from '../../../services/users';
 
 function UsersEditForm() {
@@ -9,7 +9,6 @@ function UsersEditForm() {
     const [status, setStatus] = useState(null);
 
     const initializeUser = async () => {
-        // console.log(user);
         setName(localStorage.getItem('user'));
         setEmail(localStorage.getItem('email'));
         setId(localStorage.getItem('id'));

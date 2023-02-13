@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import '../../styles/notes.scss'
 function ListNotes(props) {
-  let activos;
   return (
     <>
       <Column.Group breakpoint="mobile">

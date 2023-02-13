@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navbar, Container, Column, Button, Dropdown } from 'rbx';
+import { Navbar, Column, Button, Dropdown } from 'rbx';
 import LogoImage from '../../assets/images/logo-white.png';
 import "../../styles/header.scss";
 import UserService from '../../services/users';

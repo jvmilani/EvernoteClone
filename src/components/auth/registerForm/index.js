@@ -5,11 +5,10 @@ import {
   Label,
   Input,
   Column,
-  Section,
   Help,
 } from "rbx";
 import { useState } from "react";
-import { Link , Navigate, useNavigate} from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import UserService from "../../../services/users";
 
 export default function RegisterForm() {
@@ -23,7 +22,7 @@ export default function RegisterForm() {
     const handleSubmit = async(evt) => {
       evt.preventDefault();
       try {
-        const user = await UserService.register({
+        await UserService.register({
           username: name,
           email: email,
           password: password,
@@ -35,8 +34,6 @@ export default function RegisterForm() {
       }
     }
 
-    // if (redirectToLogin)
-    //   return <Navigate to={{ pathname: "/login" }} />;
   return (
     <>
       <Column.Group centered>
